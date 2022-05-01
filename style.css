@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Poppins:wght@300;500;600;700&family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: pink;
+  overflow: hidden;
+}
+
+.navbar-container {
+  top: 0;
+  width: 100vw;
+  min-height: 10vh;
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+}
+.navbar-container nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(77, 139, 77);
+  align-items: center;
+  position: relative;
+}
+.list2 {
+  display: none;
+  position: absolute;
+  width: 225px;
+  right: 0;
+  z-index: 99;
+  line-height: 2;
+  font-size: 20px;
+  background-color: plum;
+  border-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: 5px 5px palevioletred;
+}
+.list2 ul {
+  list-style: none;
+  color: white;
+  line-height: 2;
+  justify-content: space-between;
+}
+.list2 ul li,
+.list2 ul i {
+  cursor: pointer;
+}
+.list2 ul li:hover,
+.list2 ul i:hover {
+  color: palevioletred;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+}
+nav .list {
+  margin-right: 50px;
+}
+nav .list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+nav .list ul li {
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  color: white;
+}
+nav .list ul li:hover {
+  color: palevioletred;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+}
+nav img {
+  padding: 20px;
+  width: 120px;
+  height: 120px;
+}
+nav .burger {
+  display: flex;
+  right: 10%;
+  position: absolute;
+  cursor: pointer;
+  color: aliceblue;
+  font-size: 40px;
+}
+nav .burger:hover {
+  transform: scale(1.2);
+  color: palevioletred;
+  transition: all 0.2s linear;
+}
+nav .burg {
+  display: none;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+}
+.hero .lolly {
+  margin-right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -80px;
+  border-radius: 50%;
+}
+.hero .lolly:hover {
+  transition: all 0.5s ease-in-out;
+  background-color: gray;
+  box-shadow: 10px 10px gray;
+}
+.hero .lolly .stick {
+  width: 20px;
+  height: 300px;
+  background-color: brown;
+  border-radius: 20px;
+  position: absolute;
+  z-index: -9;
+  top: 100px;
+}
+
+.hero .lolly img {
+  width: 250px;
+  height: 250px;
+  animation: rotation 8s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.hero .explore {
+  margin-left: 30px;
+  width: 350px;
+  height: 100px;
+  border-radius: 20px;
+  box-shadow: none;
+  background-color: lightcoral;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.hero .explore:hover {
+  box-shadow: 10px 10px gray;
+  background-color: coral;
+  cursor: pointer;
+}
+@media only screen and (max-width: 900px) {
+  .navbar-container nav {
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .list {
+    display: none;
+  }
+  nav .burger {
+    display: flex;
+  }
+  .navbar-container nav {
+    justify-content: space-between;
+  }
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  .hero .lolly {
+    top: 10px;
+    position: absolute;
+    margin: auto;
+  }
+  .hero .explore {
+    width: 70%;
+    bottom: 150px;
+    position: absolute;
+    margin: auto;
+  }
+}
+a {
+  text-decoration: none;
+  color: white;
+}
